@@ -1,0 +1,120 @@
+@media (max-width: 1200px)
+  .header
+    &__left
+      display: none
+    &__right
+      justify-content: space-between
+      flex-basis: 100%
+    &__burger
+      display: block
+    &__refs
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: absolute
+      top: 20px
+      left: 50%
+      transform: translate(-50%, 0)
+    &__nav
+      display: flex
+      position: fixed
+      top: 0
+      left: -100%
+      width: 70vw
+      height: 100vh
+      margin-right: 0
+      padding-left: 15px
+      background-color: #fff
+      box-shadow: 0 2px 2px 2px rgba(1, 3, 4, 0.1)
+      overflow: auto
+      transition: 0.5s
+      &-list
+        flex-direction: column
+        align-items: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+      &_active
+        left: 0
+    &__gradient
+      display: none
+
+@media (max-width: 992px)
+  .list
+    &__item
+      &-heading
+        text-decoration: underline
+        color: $accent-color
+        &:hover
+          text-decoration: underline
+          color: $main-color
+        &::after
+          display: none
+  .contacts
+    &__item
+      flex-basis: 50%
+      margin-bottom: 30px
+
+@media (min-width: 992px) and (max-width: 1200px)
+  .simple
+    &__item
+      margin-left: 20px
+
+@media (max-width: 768px)
+  .header
+    padding: 10px 20px
+    &__logo
+      margin: auto
+  .main
+    &__button
+      display: block
+      width: 100%
+      margin-right: 0
+      margin-bottom: 15px
+  .after
+    &__steps
+      margin-bottom: 60px
+    &__step
+      &-img
+        width: 50px
+        margin-right: 15px
+      &-text
+        span
+          font-size: 21px
+  .contacts
+    &__text
+      margin-bottom: 30px
+    &__item
+      flex-basis: 100%
+  .footer
+    padding: 30px 40px
+    &__main
+      flex-basis: 100%
+    &__logo,
+    &__offline,
+    &__online
+      display: none
+  .connection
+    &__main
+      right: 10px
+    &__bubbles
+      right: 10px
+
+@media (max-width: 576px)
+  h2
+    &.title
+      font-size: 28px
+  .simple
+    &__par
+      margin-bottom: 90px
+    &__items
+      justify-content: space-around
+    &__item
+      width: 85px
+      &-number
+        font-size: 125px
+      &-ref
+        text-decoration: underline
+        &::before
+          display: none

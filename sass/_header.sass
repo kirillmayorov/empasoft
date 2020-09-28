@@ -1,0 +1,100 @@
+.header
+  position: relative
+  display: flex
+  align-items: center
+  padding: 10px 70px
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.1)
+  overflow: hidden
+  z-index: 2
+  &__left
+    position: relative
+    flex-basis: 50%
+    align-items: center
+    z-index: 2
+  &__ref
+    text-transform: uppercase
+    color: $main-color
+  &__signin
+    margin-right: 7px
+  &__right
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    flex-basis: 50%
+  &__refs
+    display: none
+  &__nav
+    margin-right: 20px
+    &-list
+      display: flex
+      padding: 0;
+      margin: 0;
+      list-style-type: none
+    &-item
+      padding: 5px
+      text-transform: uppercase
+      a
+        color: $main-color
+  &__burger
+    display: none
+    position: relative
+    width: 35px
+    height: 32px
+    border: none
+    z-index: 60
+    &:hover
+      cursor: pointer
+    &-bar
+      position: absolute
+      top: 50%
+      width: 35px
+      height: 2px
+      border-radius: 2px
+      background-color: $accent-color
+      transition: 0.15s
+      &::before 
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-12px)
+        width: 35px
+        height: 2px
+        border-radius: 2px
+        background-color: $accent-color
+        transition: 0.3s
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(10px)
+        width: 35px
+        height: 2px
+        border-radius: 2px
+        background-color: $accent-color
+        transition: 0.3s
+    &_active
+      .header__burger-bar
+        background-color: transparent
+        border: none
+      .header__burger-bar::before
+        transform: rotate(-45deg)
+      .header__burger-bar::after
+        transform: rotate(45deg)
+  &__logo
+    display: block
+    width: 130px
+    img
+      width: 100%
+  a
+    &:hover
+      color: $accent-color
+  &__gradient
+    width: 35%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%)
+    background: linear-gradient(-45deg, #31e1ce, #4c9fb3)
+    box-shadow: 10px -1px 5px 0px rgba(0,0,0,0.75)
+    z-index: 0

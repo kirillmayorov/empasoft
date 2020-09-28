@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
       // document
       //   .querySelector(".header__overlay")
       //   .classList.toggle("header__overlay_active");
-      // document.querySelector("body").classList.toggle("body_lock");
+      document.querySelector("body").classList.toggle("body_lock");
     };
   }
 
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
   //     document
   //       .querySelector(".header-overlay")
   //       .classList.toggle("header-overlay_active");
-      document.querySelector("body").classList.toggle("body_lock"); // /body_lock в файле _popup.sass
+      // document.querySelector("body").classList.toggle("body_lock"); // /body_lock в файле _popup.sass
   //   };
   // }
 
